@@ -1,4 +1,4 @@
-Para rodar o projeto, são necessárias as seguintes pendências:
+Para rodar o projeto, são necessárias as seguintes dependências:
 - pandas
 - plotly.express
 - sqlite3
@@ -6,8 +6,8 @@ Para rodar o projeto, são necessárias as seguintes pendências:
 - dash
 
 Os scripts de criação do DW estão no diretório "scrips", e serão executados automaticamente quando o aplicativo main.py for executado.
-Todos os dados necessário foram extraídos do portal do IBGE https://www.ibge.gov.br/estatisticas/downloads-estatisticas.html e armazenados no diretório "dados"
+Todos os dados necessários foram extraídos do portal do IBGE (https://www.ibge.gov.br/estatisticas/downloads-estatisticas.html) em formato Excel e armazenados no diretório "dados".
 
-Para executar esta aplicação, basta executar o main.py, em seguida acessar o endereço http://localhost:8050
+Para executar esta aplicação faça "python main.py", em seguida acesse o endereço http://localhost:8050
 
 Enjoy!

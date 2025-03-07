@@ -5,7 +5,6 @@ import sqlite3
 import numpy as np
 import pandas as pd
 import plotly.express as px
-from sqlalchemy import create_engine
 
 
 def convert_int(value):
@@ -76,37 +75,6 @@ def prepare_db(codigo_cidade):
 
 def prepare_dataset(codigo_cidade):
     prepare_db(codigo_cidade)
-
-    # Arquivos com os dados do IBGE
-#    dados_renda_ibge = 'dados/PessoaRenda_BA.xlsx'
-#    dados_setor_ibge = 'dados/Agregados_por_setores_basico_BR.xlsx'
-
-#    df_renda = pd.read_excel(dados_renda_ibge)[['Cod_setor', 'V001', 'V002', 'V010', 'V020']]
-#    df_renda = df_renda.rename(columns={
-#        'Cod_setor': 'Setor',
-#        'V001': 'Ate Meio Salario',
-#        'V002': 'Ate Um Salario',
-#        'V010': 'Sem Renda',
-#        'V020': 'Populacao'
-#    })
-
-#    df_setor = pd.read_excel(dados_setor_ibge)[['CD_SETOR', 'SITUACAO', 'NM_DIST', 'NM_BAIRRO']]
-#    df_setor = df_setor.rename(columns={
-#        'CD_SETOR': 'Setor',
-#        'SITUACAO': 'Zona',
-#        'NM_DIST': 'Distrito',
-#        'NM_BAIRRO': 'Bairro'
-#    })
-
-#    df_renda = df_renda[df_renda['Setor'].astype(str).str.startswith(codigo_cidade)]
-#    df_setor = df_setor[df_setor['Setor'].astype(str).str.startswith(codigo_cidade)]
-
-#    df_resultado = pd.merge(df_renda, df_setor, on='Setor')
-
-#    df_resultado['Ate Meio Salario'] = df_resultado['Ate Meio Salario'].replace({'X': '0'}).fillna(0)
-#    df_resultado['Ate Um Salario'] = df_resultado['Ate Um Salario'].replace({'X': '0'}).fillna(0)
-#    df_resultado['Sem Renda'] = df_resultado['Sem Renda'].replace({'X': '0'}).fillna(0)
-#    df_resultado['Populacao'] = df_resultado['Populacao'].replace({'X': '0'}).fillna(1)
 
     print("Preparando o DataSet...")
 
